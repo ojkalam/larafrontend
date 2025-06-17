@@ -11,6 +11,10 @@ class LoginController extends Controller
 {
     public function create()
     {
+        if (Auth::check()) {
+            // The user is logged in...
+            return redirect('/dashboard');
+        }
         return view('auth.login');
     }
 
@@ -34,8 +38,8 @@ class LoginController extends Controller
         Auth::logout();
 
         $request->session()->invalidate();
-        $request->session()->regenerateToken(); 
-        
+        $request->session()->regenerateToken();
+
         return redirect('/login');
     }
 }

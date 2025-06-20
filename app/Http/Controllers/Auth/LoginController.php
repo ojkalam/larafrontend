@@ -6,16 +6,19 @@ use App\Http\Controllers\Controller;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
 class LoginController extends Controller
 {
     public function create()
     {
-        if (Auth::check()) {
-            // The user is logged in...
-            return redirect('/dashboard');
-        }
-        return view('auth.login');
+        return Inertia::render('Auth/Login');
+
+        // if (Auth::check()) {
+        //     // The user is logged in...
+        //     return redirect('/dashboard');
+        // }
+        // return view('auth.login');
     }
 
     public function store(Request $request)

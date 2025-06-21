@@ -8,7 +8,7 @@ class DepartmentController extends Controller
 {
     public function index()
     {
-        sleep(2);
+        // sleep(2);
         //need to test mailpit from local
         return Inertia::render('Department');
     }

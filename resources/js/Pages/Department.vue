@@ -1,6 +1,6 @@
 <script setup>
 import GuestLayout from '@/layouts/GuestLayout.vue';
-import { Link } from '@inertiajs/vue3';
+import { Link, Head } from '@inertiajs/vue3';
 
 //this thing using option api and its old vue syntax
 // export default {
@@ -26,6 +26,7 @@ import { Link } from '@inertiajs/vue3';
 
 <template>
     <GuestLayout>
+        <Head :title="'Department title' + 10"> </Head>
         <Link :href="route('login')">Go to Login page </Link>
         <p>Department page</p>
 

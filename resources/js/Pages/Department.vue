@@ -1,8 +1,9 @@
 <script setup>
+//setup used to composition api.
 import GuestLayout from '@/layouts/GuestLayout.vue';
 import { Link, Head } from '@inertiajs/vue3';
 
-//this thing using option api and its old vue syntax
+//this thing using option api and its old vue syntax now setup is used to replace tradiation export . component etc.
 // export default {
 //     components: {
 //         GuestLayout,
@@ -10,7 +11,7 @@ import { Link, Head } from '@inertiajs/vue3';
 //     },
 // };
 
-//using composition api in vue which is default
+//using composition api in vue3 which is default
 // import { ref } from 'vue';
 
 // export default {
